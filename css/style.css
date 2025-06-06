@@ -35,7 +35,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(243, 154, 59, 0.186), rgba(192, 67, 0, 0.7));
+    background: linear-gradient(rgba(200, 151, 97, 0.186), rgba(220, 106, 44, 0.7));
     z-index: -1;
 }
 
@@ -59,7 +59,7 @@ section {
 }
 
 .btn-main {
-    background: linear-gradient(to right,#964606, #e46802);
+    background: linear-gradient(to right,#c02007, #ec8a3a);
     border-radius: none;
     border: none;
     font-weight: 700;
@@ -81,6 +81,7 @@ section {
 }
 .section-intro {
     margin-bottom: 40px;
+    color: #760808;
 }
 
 .section-intro .divider {

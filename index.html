@@ -140,6 +140,43 @@
         </div>
     </section>
 
+    </head>
+<body>
+  <header>
+    <h1>Ár Kalkulátor</h1>
+  </header>
+
+  <main>
+    <form id="calculator">
+      <label for="workType">Masszázs típusa:</label>
+      <select id="workType">
+        <!-- Opciók dinamikusan generálódnak JavaScript-ből -->
+      </select>
+
+      <label for="area">óra:</label>
+      <input type="number" id="area" placeholder="Adja meg a négyzetmétert" required min="0">
+
+      <label for="count">Masszázs idő:</label>
+      <input type="number" id="count" placeholder="Adja meg a darabszámot" required min="0">
+
+      <button type="button" onclick="addItem()">Kosárba helyezés</button>
+    </form>
+
+    <h3>Kiválasztott tételek:</h3>
+    <ul id="itemList"></ul>
+
+    <h3>Végösszeg:</h3>
+    <p id="totalCost">0 HUF</p>
+  </main>
+
+  <footer>
+    <p>&copy; Árak</p>
+  </footer>
+
+  <script src="./assests/main.js"></script>
+</body>
+</html>
+
     <!--about-->
     <section id="about" class="bg-cover" style="background-image: url(img/c\ \(7\).jpg);">
         <div class="overlay"></div>

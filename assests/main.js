@@ -1,12 +1,20 @@
 // Árak (Excel adatok alapján szerkeszthető)
 const prices = [
-    { id: "mowing", name: "Fűnyírás", unit: "m²", price: 500 },
-    { id: "planting", name: "Ültetés", unit: "db", price: 1000 },
-    { id: "gravel", name: "Kavics elrendezés", unit: "m³", price: 15000 },
-    { id: "paving", name: "Térkövezés", unit: "m²", price: 20000 },
-    { id: "weeding", name: "Gyomirtás", unit: "m²", price: 300 },
+  { id: "mowing", name: "Svéd Masszázs fél óra", unit: "óra", price: 5000 },
+    { id: "mowing", name: "Svéd Masszázs", unit: "óra", price: 10000 },
+    { id: "gravel", name: "Mélyszöveti Masszázs fél óra", unit: "óra", price: 5000 },
+    { id: "gravel", name: "Mélyszöveti Masszázs", unit: "óra", price: 10000 },
+    { id: "planting", name: "Relaxációs Masszázs fél óra", unit: "óra", price: 5000 },
+    { id: "planting", name: "Relaxációs Masszázs", unit: "óra", price: 10000 }, 
+    { id: "paving", name: "Aromaterápia Masszázs fél óra", unit: "óra", price: 5000 },
+    { id: "paving", name: "Aromaterápia Masszázs", unit: "óra", price: 10000 },
+    { id: "weeding", name: "Talp Reflexológia fél óra", unit: "óra", price: 5000 },
+    { id: "weeding", name: "Talp Reflexológia", unit: "óra", price: 10000 },
+    
+    ];
+    
     // További tételek hozzáadhatók...
-  ];
+
   
   // Kosár tételeinek tárolása
   const cart = [];
@@ -25,11 +33,11 @@ const prices = [
   // Új tétel hozzáadása a kosárhoz
   function addItem() {
     const workTypeId = document.getElementById("workType").value;
-    const area = parseFloat(document.getElementById("area").value) || 0;
+    const hour = parseFloat(document.getElementById("area").value) || 0;
     const count = parseFloat(document.getElementById("count").value) || 0;
   
     // Ellenőrzés: nincs negatív érték
-    if (!workTypeId || area < 0 || count < 0 || (area === 0 && count === 0)) {
+    if (!workTypeId || hour < 0 || count < 0 || (hour === 0 && count === 0)) {
       alert("Kérlek, adj meg érvényes és pozitív adatokat!");
       return;
     }
@@ -37,18 +45,18 @@ const prices = [
     const task = prices.find(item => item.id === workTypeId);
   
     let cost = 0;
-    if (task.unit === "m²") {
-      cost = task.price * area; // Négyzetméter alapú számítás
+    if (task.unit === "óra") {
+      cost = task.price * hour; // Négyzetméter alapú számítás
     } else if (task.unit === "db") {
       cost = task.price * count; // Darabszám alapú számítás
-    } else if (task.unit === "m³") {
-      cost = task.price * area; // Köbméter alapú számítás
+    } else if (task.unit === "óra") {
+      cost = task.price * hour; // Köbméter alapú számítás
     } else {
       alert("Nem támogatott egység.");
       return;
     }
   
-    cart.push({ name: task.name, area, count, cost });
+    cart.push({ name: task.name, hour, count, cost });
     updateItemList();
     updateTotalCost();
   }
@@ -60,7 +68,7 @@ const prices = [
   
     cart.forEach((item, index) => {
       const listItem = document.createElement("li");
-      listItem.textContent = `${item.name} - ${item.area ? `${item.area} m²` : ""} ${item.count ? `${item.count} db` : ""} = ${item.cost} HUF`;
+      listItem.textContent = `${item.name} - ${item.area ? `${item.area} óra` : ""} ${item.count ? `${item.count} db` : ""} = ${item.cost} HUF`;
   
       // Eltávolítás gomb hozzáadása
       const deleteButton = document.createElement("button");
@@ -87,3 +95,44 @@ const prices = [
   
   // Oldal betöltésekor a munka típusok megjelenítése
   document.addEventListener("DOMContentLoaded", populateWorkTypes);
+
+  document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Megakadályozza az oldal újratöltését
+    
+    let massageType = document.getElementById("massageType").value;
+    let date = document.getElementById("date").value;
+    let time = document.getElementById("time").value;
+    
+    alert(`Foglalás sikeres!\nMasszázs: ${massageType}\nDátum: ${date}\nIdőpont: ${time}`);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const calendar = document.getElementById("calendar");
+    const startTime = 8; // Reggel 8-tól
+    const endTime = 20; // Este 20-ig
+
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || {}; // Tárolt foglalások
+
+    // Időpontok létrehozása
+    for (let hour = startTime; hour <= endTime; hour++) {
+        let timeSlot = document.createElement("div");
+        timeSlot.classList.add("day");
+        timeSlot.innerText = `${hour}:00`;
+
+        if (bookings[hour]) {
+            timeSlot.classList.add("booked");
+        }
+
+        timeSlot.addEventListener("click", function () {
+            if (bookings[hour]) return;
+
+            bookings[hour] = true;
+            localStorage.setItem("bookings", JSON.stringify(bookings));
+            timeSlot.classList.add("booked");
+            alert(`Foglalás sikeres: ${hour}:00`);
+        });
+
+        calendar.appendChild(timeSlot);
+    }
+});
+

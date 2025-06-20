@@ -139,10 +139,7 @@ section {
     max-height: 36px;
     margin-right: 6px;
   }
-}
-.navbar-nav .nav-link {
-  font-size: 16px;
-}
+
 
 
 .navbar .dropdown-menu {
@@ -314,5 +311,8 @@ li {
   }
 }
 
-
+}
+.navbar-nav .nav-link {
+  font-size: 16px;
+}
 

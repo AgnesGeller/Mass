@@ -1,14 +1,14 @@
 // Árak (Excel adatok alapján szerkeszthető)
 const prices = [
-  { id: "mowing", name: "Svéd Masszázs fél óra", unit: "óra", price: 5000 },
+  { id: "mowing", name: "Svéd Masszázs", unit: "fél óra", price: 5000 },
     { id: "mowing", name: "Svéd Masszázs", unit: "óra", price: 10000 },
-    { id: "gravel", name: "Mélyszöveti Masszázs fél óra", unit: "óra", price: 5000 },
+    { id: "gravel", name: "Mélyszöveti Masszázs", unit: "fél óra", price: 5000 },
     { id: "gravel", name: "Mélyszöveti Masszázs", unit: "óra", price: 10000 },
-    { id: "planting", name: "Relaxációs Masszázs fél óra", unit: "óra", price: 5000 },
+    { id: "planting", name: "Relaxációs Masszázs", unit: "fél óra", price: 5000 },
     { id: "planting", name: "Relaxációs Masszázs", unit: "óra", price: 10000 }, 
-    { id: "paving", name: "Aromaterápia Masszázs fél óra", unit: "óra", price: 5000 },
+    { id: "paving", name: "Aromaterápia Masszázs", unit: "fél óra", price: 5000 },
     { id: "paving", name: "Aromaterápia Masszázs", unit: "óra", price: 10000 },
-    { id: "weeding", name: "Talp Reflexológia fél óra", unit: "óra", price: 5000 },
+    { id: "weeding", name: "Talp Reflexológia", unit: "fél óra", price: 5000 },
     { id: "weeding", name: "Talp Reflexológia", unit: "óra", price: 10000 },
     
     ];

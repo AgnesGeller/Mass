@@ -115,20 +115,31 @@ section {
     margin-top: -5px;
 }
 
+.navbar-logo {
+  max-height: 40px;
+  width: auto !important;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.navbar-brand {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.05rem;
+  white-space: normal;
+  line-height: 1.2;
+}
+
 @media (max-width: 576px) {
   .navbar-brand {
-    font-size: 15px;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.1;
   }
 
   .navbar-logo {
-    max-height: 68px;
+    max-height: 28px;
     margin-right: 4px;
   }
 }
-
-.navbar-brand {font-family: 'Great Vibes', cursive;
-font-size: medium;}
 
 
 .navbar .dropdown-menu {
@@ -219,7 +230,7 @@ select {
 }
 #Worktype {
   font-family: 'Dancing Script', cursive;
-  font: weight 700px;
+  font: weight 800px;
 }
 
 
@@ -253,7 +264,7 @@ li {
   border: 1px solid #ddd;
 }
 
-#totalCost {
+/*#totalCost {
   font-size: 1.5rem;
   font-weight: bold;
   color: #140586;

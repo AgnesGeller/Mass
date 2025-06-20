@@ -115,6 +115,18 @@ section {
     margin-top: -5px;
 }
 
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .navbar-logo {
+    max-height: 68px;
+    margin-right: 4px;
+  }
+}
+
 .navbar-brand {font-family: 'Great Vibes', cursive;
 font-size: medium;}
 

@@ -12,8 +12,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
+    
+}
+.navbar-logo {
+  max-height: 80px;     /* kisebb magasság, hogy ne nyújtson szét */
+  width: auto;          /* az arányok megtartása */
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 a {
@@ -28,7 +34,8 @@ img {
 }
 
 section {
-  background-color: #f3b097;
+    background: linear-gradient(to right, #ffccab, #fbb288);
+    border-radius: none;
     padding-top: 120px;
     padding-bottom: 80px;
     z-index: 2;
@@ -93,7 +100,7 @@ section {
 .section-intro .divider {
     height: 4px;
     width: 70px;
-    background: linear-gradient(to right,#ef8c68, #160401);
+    background: linear-gradient(to right,#ef8c68, #3f0d04);
     margin: 16px auto;
 }
 /* Szolgáltatások Dropdown stílusok */
@@ -108,7 +115,7 @@ section {
     margin-top: -5px;
 }
 
-.navbar-brand {font-family: 'Dancing Script', cursive;
+.navbar-brand {font-family: 'Great Vibes', cursive;
 font-size: medium;}
 
 
@@ -131,12 +138,19 @@ font-size: medium;}
     position: relative;
 }
 footer {
-    background: linear-gradient(to right,#760808, #160101);
+    background: linear-gradient(to right,#290101, #de1b1b);
     color: #fff;
 }
 
 footer a {
     color: #fff;
+}
+
+.footer-logo {
+  max-height: 68px;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .mb-0 {
@@ -191,6 +205,11 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px; /* Szépített sarok */
 }
+#Worktype {
+  font-family: 'Dancing Script', cursive;
+  font: weight 700px;
+}
+
 
 input {
   box-sizing: border-box; /* Pontos méretezés */
@@ -202,7 +221,7 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {

@@ -87,7 +87,7 @@ section {
 }
 .section-intro {
     margin-bottom: 40px;
-    color: #760808;
+    color: #FFF;
 }
 
 .section-intro .divider {
@@ -157,7 +157,7 @@ body {
 }
 
 header {
-  background-color: #043d06;
+  background-color: #760808;
   color: white;
   text-align: center;
   padding: 10px 0;

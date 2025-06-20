@@ -141,9 +141,28 @@ section {
   }
 
 
-
 .navbar .dropdown-menu {
     z-index: 1050; /* Higher than the overlay and section */
+}
+}
+
+@media (min-width: 768px) {
+  footer .row {
+    align-items: center;
+  }
+
+  footer .col-md-6 {
+    display: flex;
+    align-items: center;
+  }
+
+  footer .col-md-6:first-child {
+    justify-content: flex-start;
+  }
+
+  footer .col-md-6:last-child {
+    justify-content: flex-end;
+  }
 }
 
 
@@ -310,8 +329,21 @@ li {
     font-size: 1rem; /* Alap méret tableteken */
   }
 }
-
+#contact .row {
+  justify-content: center;
 }
+
+#contact form {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
 .navbar-nav .nav-link {
   font-size: 16px;
 }

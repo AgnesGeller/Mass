@@ -28,7 +28,7 @@ img {
 }
 
 section {
-  background-color: #ef8c68;
+  background-color: #f3b097;
     padding-top: 120px;
     padding-bottom: 80px;
     z-index: 2;
@@ -108,7 +108,7 @@ section {
     margin-top: -5px;
 }
 
-.navbar-brand {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.navbar-brand {font-family: 'Dancing Script', cursive;
 font-size: medium;}
 
 
@@ -140,14 +140,14 @@ footer a {
 }
 
 .mb-0 {
-    font-family: 'Garamond', sans-serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 16px;
     color: #fff;
 }
 
 /* Alap stílusok */
 body {
-  font-family: Garamond, sans-serif;
+  font-family: ;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;

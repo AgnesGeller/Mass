@@ -131,14 +131,17 @@ section {
 
 @media (max-width: 576px) {
   .navbar-brand {
-    font-size: 14px;
-    line-height: 1.1;
+    font-size: 16px;
+    line-height: 1.2;
   }
 
   .navbar-logo {
-    max-height: 28px;
-    margin-right: 4px;
+    max-height: 36px;
+    margin-right: 6px;
   }
+}
+.navbar-nav .nav-link {
+  font-size: 16px;
 }
 
 
